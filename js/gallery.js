@@ -1,6 +1,6 @@
 var photoListElement = document.querySelector("#photos");
 
-var photoList = [
+var photoList = [//リストの中に写真を追加
     {src: "img/200705.png", title: "7月"},
     {src: "img/200806.png", title: "8月"},
     {src: "img/走る大根.jpg", title: "大根2"},
@@ -28,7 +28,7 @@ var renderPhoto = function(index){
 var showPhotos = function(){
     if(isReady()){
         var index = 0;
-        while(index < photoList.length){
+        while(index < photoList.length){//リストを増やした分だけlenghtも増えたから正常に表示される
             var elm = renderPhoto(index);
             photoListElement.appendChild(elm);
             index = index + 1;
